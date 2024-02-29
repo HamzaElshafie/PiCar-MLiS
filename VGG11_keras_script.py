@@ -11,8 +11,10 @@ import pandas as pd
 import os
 from data_generator import DataGenerator
 
-df = pd.read_csv('/Users/hamzaelshafie/Desktop/pyCharm-workspace/PiCar/Data/training_norm.csv')
-dataset_path = '/Users/hamzaelshafie/Desktop/pyCharm-workspace/PiCar/Data/training_data'
+script_dir = os.path.dirname(os.path.realpath(__file__))
+df = pd.read_csv(os.path.join(script_dir, '..', 'Data', 'training_norm.csv'))
+dataset_path = os.path.join(script_dir, '..', 'Data', 'training_data')
+
 file_paths = []
 for id in df['image_id']:
     path = os.path.join(dataset_path, f"{id}.png")
