@@ -1,0 +1,3 @@
+Add variables file to normal car upload folder
+add tflite model to tflite folder
+add model.py after it works to tflite folder
